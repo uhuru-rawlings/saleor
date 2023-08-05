@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light top_navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="width: 100px;">
+                <img src="{% static 'assets/images/kilele-logo-7-300w.png' %}" style="width: 100%; object-fit: cover;" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ms-auto">
+                <a class="nav-item nav-link" href="#"><i class="fas fa-magnifying-glass"></i></a>
+                <a class="nav-item nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+              </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light positioned_navbar">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="container nav-bar-items">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav right_navbar_content">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home_page' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'about_us' %}">About Us</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                      <a class="nav-link" href="#">Custom & Wholesale</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Subscription & FAQ</a>
+                  </li> -->
+                </ul>
+                <!-- <ul class="navbar-nav ms-auto small_link">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Account</a>
+                  </li>
+                </ul> -->
+            </div>
+        </div>
+    </nav>
+    <div class="container py-5">
+        <h3>About Us</h3>
+        <p>
+            Welcome to Kilele Coffee, your gateway to exceptional Kenyan coffee from the picturesque Nyeri County. Our name, Kilele, stems from the Swahili word for 'peak,' perfectly encapsulating the elevated quality of our coffees. Indulge in the rich flavors and captivating aromas of our sustainably grown, cultivated at altitudes exceeding 1600 meters above sea level. At Kilele Coffee, sustainability is at the core of our values. We take pride in our environmentally conscious farming practices, ensuring that every sip of our coffee reflects our commitment to the land and the community. Our coffee is nurtured using sustainable methods that preserve the natural ecosystem and protect the biodiversity of Nyeri County. With each cup, you are not only experiencing exceptional quality but also supporting a sustainable future for generations to come. We prioritize fair compensation for our small-scale farmers and uphold rigorous social, economic, and environmental standards. By choosing Kilele Coffee, you directly contribute to the well-being of our farmers, empowering them to build thriving communities. Our commitment to Fair Trade principles drives us to create positive change through sustainable practices.
+        </p>
+        <p>
+            We are dedicated to empowering women farmers in Nyeri County. Through capacity-building initiatives, we provide training and resources that enable women to actively participate in all aspects of coffee production. By equipping them with knowledge and skills, we foster gender equality and create opportunities for women to lead and prosper within their cooperative societies. Our coffee beans flourish in the high altitudes of Nyeri County, where the perfect combination of climate and elevation sets the stage for extraordinary flavor profiles. We offer two distinct processing methods to showcase the unique characteristics of our coffees. The traditional washed and naturally dried process ensures a clean and balanced cup, while our innovative anaerobic fermentation method produces coffees with exquisite complexity and depth. Embrace the distinction of our coffee, which consistently ranks among the world's top 5% specialty coffees. To suit your preferences, we offer a range of options.
+        </p>
+        <p>
+            You can savor our exceptional coffee at our inviting coffee shops, immersing yourself in the complete Kilele experience. Alternatively, you can bring the essence of our coffees home by purchasing our carefully packaged green beans, roasts, and grounds. Every choice you make helps us continue our mission of providing exceptional coffee while making a positive impact. Discover the pinnacle of flavor, sustainability, and empowerment with Kilele Coffee. Join us on a remarkable journey that combines outstanding taste with meaningful change. Experience the excellence of Kenyan coffee and support our small-scale farmers as they reach new heights. 
+        </p>
+    </div>
+    <footer>
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="{% url 'about_us' %}" class="nav-link">About</a></li>
+              <li><a href="{% url 'home' %}" class="nav-link">Shop</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <h3>Contact Us</h3>
+              <ul>
+                <li><a href="mailto:info@kilele.coffee" class="nav-link">info@kilele.coffee</a></li>
+                <li><a href="tel:+254 714 019 233" class="nav-link">+254 714 019 233</a></li>
+                <li><a href="" class="nav-link">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 follow_us_links">
+              <h3>Follow Us</h3>
+              <ul>
+                <li><a target="_blank" href="https://www.facebook.com/people/Kilele-Coffee-Co/100064250433074/"><i class="fab fa-facebook"></i></a></li>
+                <li><a target="_blank" href="https://twitter.com/KileleCoffee"><i class="fab fa-twitter"></i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/kilelecoffee/"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copy-right">
+          <div class="container py-5">
+            <p> © 2023 Kilele Coffee, All Rights Reserved.</p>
+          </div>
+        </div>
+    </footer>
+</body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</html>

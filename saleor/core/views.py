@@ -16,5 +16,24 @@ def home(request):
     )
 
 
+def home_page(request):
+    # storefront_url = os.environ.get("STOREFRONT_URL", "")
+    # dashboard_url = os.environ.get("DASHBOARD_URL", "")
+    return TemplateResponse(
+        request,
+        "index.html",
+        # {"storefront_url": storefront_url, "dashboard_url": dashboard_url},
+    )
+    
+def about_home(request):
+    # storefront_url = os.environ.get("STOREFRONT_URL", "")
+    # dashboard_url = os.environ.get("DASHBOARD_URL", "")
+    return TemplateResponse(
+        request,
+        "about.html",
+        # {"storefront_url": storefront_url, "dashboard_url": dashboard_url},
+    )
+
+
 def jwks(request):
     return JsonResponse(get_jwt_manager().get_jwks())

@@ -68,5 +68,8 @@ if settings.DEBUG:
 
     urlpatterns += static("/media/", document_root=settings.MEDIA_ROOT) + [
         re_path(r"^static/(?P<path>.*)$", serve),
-        re_path(r"^$", views.home, name="home"),
+        re_path(r'^$', views.home_page, name='home_page'),
+        re_path(r'^about/$', views.about_home, name='about_us'),
+        # re_path(r"^$", views.home, name="home"),
+        re_path(r'^shop/$', views.home, name='home'),
     ]
